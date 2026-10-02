@@ -8,8 +8,13 @@
         "field_id": "demo_text",
         "type": "text_input",
         "title": "Пример текста",
-        "instructions": "Заполните поле",
-        "validation": {}
+        "instructions": "Заполните поле"
+      },
+      {
+        "field_id": "photo",
+        "type": "camera_photo",
+        "title": "Новое поле",
+        "instructions": ""
       }
     ],
     "flow": {
@@ -17,17 +22,17 @@
         {
           "id": "form1",
           "screen": "scroll_form",
-          "form_title": "Сбор данных",
           "field_ids": [
-            "demo_text"
-          ]
+            "demo_text",
+            "photo"
+          ],
+          "form_title": "Сбор данных"
         },
         {
           "id": "review",
           "screen": "review"
         }
       ]
-    },
-    "ui": {}
+    }
   }
 }
