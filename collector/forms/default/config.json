@@ -1,0 +1,33 @@
+{
+  "id": "dc-demo",
+  "name": "дс-демо",
+  "version": "1",
+  "config": {
+    "fields": [
+      {
+        "field_id": "demo_text",
+        "type": "text_input",
+        "title": "Пример текста",
+        "instructions": "Заполните поле",
+        "validation": {}
+      }
+    ],
+    "flow": {
+      "steps": [
+        {
+          "id": "form1",
+          "screen": "scroll_form",
+          "form_title": "Сбор данных",
+          "field_ids": [
+            "demo_text"
+          ]
+        },
+        {
+          "id": "review",
+          "screen": "review"
+        }
+      ]
+    },
+    "ui": {}
+  }
+}
