@@ -2,10 +2,10 @@
   "version": 1,
   "on_commit": {
     "enabled": true,
-    "url": "https://dc-korovas-pipeline.korovas.ml.epoch8.dev/api/run-with-labels",
+    "url": "http://localhost:8010/run-with-labels",
     "method": "POST",
     "headers": { "Content-Type": "application/json" },
     "body": { "labels": [["stage", "packages"]] },
-    "timeout_seconds": 10
+    "timeout_seconds": 30
   }
 }
