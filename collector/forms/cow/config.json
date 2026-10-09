@@ -1,7 +1,7 @@
 {
   "id": "krs-label",
-  "name": "Korovas Scan — старая форма",
-  "version": "1.0",
+  "name": "Корова — сбор данных",
+  "version": "2.1",
   "config": {
     "fields": [
       {
@@ -23,13 +23,10 @@
         }
       },
       {
-        "field_id": "cow_gender",
-        "type": "text_input",
-        "title": "Пол",
-        "instructions": "Например: бык, корова, телка, бычок, телёнок.",
-        "validation": {
-          "required": true
-        }
+        "field_id": "form_scenario_hint",
+        "type": "instruction",
+        "title": "",
+        "instructions": "## Корова\n\nТип животного для этой формы: **корова**."
       },
       {
         "field_id": "cow_breed",
@@ -126,19 +123,19 @@
         "field_id": "months",
         "type": "text_input",
         "title": "Возраст (месяцев)",
-        "instructions": "Целое число, 1–120"
+        "instructions": "Возраст в месяцах (для коров — по факту)."
       },
       {
         "field_id": "weight_real",
         "type": "text_input",
         "title": "Вес, кг",
-        "instructions": "Стандартное взвешивание"
+        "instructions": "Стандартное взвешивание. Важно для собственника постоянно; в перспективе — расчёт по фото (must have)."
       },
       {
         "field_id": "height_at_croup_real",
         "type": "text_input",
         "title": "Высота в крестце, см",
-        "instructions": "От наивысшей точки крестца до земли"
+        "instructions": "От наивысшей точки крестца до земли. Нужна собственнику любого пола и возраста; после inference — в пакет."
       },
       {
         "field_id": "height_at_withers_real",
@@ -219,10 +216,28 @@
         "instructions": "Ручной замер, см или кг"
       },
       {
+        "field_id": "qual_scale_hint",
+        "type": "instruction",
+        "title": "",
+        "instructions": "## Шкала конституции и экстерьера коров\n\nИтого максимум **100** баллов (с коэффициентами)."
+      },
+      {
+        "field_id": "overall_type_real",
+        "type": "text_input",
+        "title": "Общий вид, развитие и тип породы (балл)",
+        "instructions": "От 1.0 до 5.0. Высший балл: Крупный формат, широкое и округлое туловище с хорошо выраженным мясным типом породы"
+      },
+      {
+        "field_id": "overall_type_real_desc",
+        "type": "text_input",
+        "title": "Описание: общий вид, развитие и тип породы",
+        "instructions": "По желанию"
+      },
+      {
         "field_id": "musculature_real",
         "type": "text_input",
         "title": "Мускулатура (балл)",
-        "instructions": "От 1.0 до 5.0"
+        "instructions": "От 1.0 до 5.0. Высший балл: Хорошо развитая мускулатура, крепкий, но не грубый костяк"
       },
       {
         "field_id": "musculature_real_desc",
@@ -234,7 +249,7 @@
         "field_id": "head_and_neck_real",
         "type": "text_input",
         "title": "Голова и шея (балл)",
-        "instructions": "От 1.0 до 5.0"
+        "instructions": "От 1.0 до 5.0. Высший балл: Голова легкая, типичная для породы, шея короткая, хорошо обмускуленная"
       },
       {
         "field_id": "head_and_neck_real_desc",
@@ -246,7 +261,7 @@
         "field_id": "chest_quality_real",
         "type": "text_input",
         "title": "Грудь (балл)",
-        "instructions": "От 1.0 до 5.0"
+        "instructions": "От 1.0 до 5.0. Высший балл: Широкая, глубокая, без западин за лопатками; хорошо развитый соколок"
       },
       {
         "field_id": "chest_quality_real_desc",
@@ -258,7 +273,7 @@
         "field_id": "withers_back_loin_real",
         "type": "text_input",
         "title": "Холка, спина, поясница (балл)",
-        "instructions": "От 1.0 до 5.0"
+        "instructions": "От 1.0 до 5.0. Высший балл: Широкая, мясистая холка; верхняя линия ровная; широкие, длинные спина и поясница с хорошо развитой мускулатурой"
       },
       {
         "field_id": "withers_back_loin_real_desc",
@@ -270,7 +285,7 @@
         "field_id": "croup_real",
         "type": "text_input",
         "title": "Крестец (балл)",
-        "instructions": "От 1.0 до 5.0"
+        "instructions": "От 1.0 до 5.0. Высший балл: Ровный, широкий и длинный, хорошо заполненный мускулатурой; правильно посаженный хвост"
       },
       {
         "field_id": "croup_real_desc",
@@ -279,22 +294,10 @@
         "instructions": "По желанию"
       },
       {
-        "field_id": "scrotum_real",
-        "type": "text_input",
-        "title": "Мошонка (балл)",
-        "instructions": "От 1.0 до 5.0"
-      },
-      {
-        "field_id": "scrotum_real_desc",
-        "type": "text_input",
-        "title": "Описание: мошонка",
-        "instructions": "По желанию"
-      },
-      {
         "field_id": "ham_real",
         "type": "text_input",
         "title": "Окорока (балл)",
-        "instructions": "От 1.0 до 5.0"
+        "instructions": "От 1.0 до 5.0. Высший балл: Хорошо развитая мускулатура, спускающаяся до скакательного сустава"
       },
       {
         "field_id": "ham_real_desc",
@@ -303,10 +306,22 @@
         "instructions": "По желанию"
       },
       {
+        "field_id": "udder_real",
+        "type": "text_input",
+        "title": "Вымя (балл)",
+        "instructions": "От 1.0 до 5.0. Высший балл: Достаточно развитое, правильной формы"
+      },
+      {
+        "field_id": "udder_real_desc",
+        "type": "text_input",
+        "title": "Описание: вымя",
+        "instructions": "По желанию"
+      },
+      {
         "field_id": "limbs_real",
         "type": "text_input",
         "title": "Конечности (балл)",
-        "instructions": "От 1.0 до 5.0"
+        "instructions": "От 1.0 до 5.0. Высший балл: Правильно поставленные с крепкими копытами"
       },
       {
         "field_id": "limbs_real_desc",
@@ -396,19 +411,13 @@
         "field_id": "photo_genitals_guide",
         "type": "instruction",
         "title": "",
-        "instructions": "## Мошонка или вымя\n\nЗависит от пола (см. шаг идентификации):\n- **Бык** — мошонка;\n- **Корова / телка** — вымя.\n\nЗагрузите нужную категорию; вторую можно пропустить."
-      },
-      {
-        "field_id": "photo_scrotum",
-        "type": "camera_photo",
-        "title": "Мошонка (бык)",
-        "instructions": "Только для быков."
+        "instructions": "## Вымя\n\nКадр вымени: достаточно развитое, правильной формы."
       },
       {
         "field_id": "photo_udder",
         "type": "camera_photo",
-        "title": "Вымя (корова, телка)",
-        "instructions": "Только для коров и телок."
+        "title": "Вымя",
+        "instructions": "Кадр вымени."
       },
       {
         "field_id": "photo_head_guide",
@@ -437,7 +446,7 @@
           "field_ids": [
             "scan_time",
             "cow_name",
-            "cow_gender",
+            "form_scenario_hint",
             "cow_breed",
             "cow_identifier"
           ],
@@ -480,6 +489,9 @@
           "id": "real_qualitative",
           "screen": "scroll_form",
           "field_ids": [
+            "qual_scale_hint",
+            "overall_type_real",
+            "overall_type_real_desc",
             "musculature_real",
             "musculature_real_desc",
             "head_and_neck_real",
@@ -490,82 +502,39 @@
             "withers_back_loin_real_desc",
             "croup_real",
             "croup_real_desc",
-            "scrotum_real",
-            "scrotum_real_desc",
             "ham_real",
             "ham_real_desc",
+            "udder_real",
+            "udder_real_desc",
             "limbs_real",
             "limbs_real_desc"
           ],
-          "form_title": "Бальные оценки"
+          "form_title": "Оценка конституции и экстерьера"
         },
         {
-          "id": "photo_profile",
+          "id": "photos",
           "screen": "scroll_form",
           "field_ids": [
             "photo_profile_guide",
             "photo_profile_left",
-            "photo_profile_right"
-          ],
-          "form_title": "Профиль (оба бока)"
-        },
-        {
-          "id": "photo_top",
-          "screen": "scroll_form",
-          "field_ids": [
+            "photo_profile_right",
             "photo_top_guide",
-            "photo_top"
-          ],
-          "form_title": "Вид сверху"
-        },
-        {
-          "id": "photo_rear_23",
-          "screen": "scroll_form",
-          "field_ids": [
+            "photo_top",
             "photo_rear_23_guide",
             "photo_rear_23_left",
-            "photo_rear_23_right"
-          ],
-          "form_title": "2/3 сзади (оба бока)"
-        },
-        {
-          "id": "photo_front_23",
-          "screen": "scroll_form",
-          "field_ids": [
+            "photo_rear_23_right",
             "photo_front_23_guide",
             "photo_front_23_left",
-            "photo_front_23_right"
-          ],
-          "form_title": "2/3 спереди (оба бока)"
-        },
-        {
-          "id": "photo_front_legs",
-          "screen": "scroll_form",
-          "field_ids": [
+            "photo_front_23_right",
             "photo_front_legs_guide",
-            "photo_front_legs"
-          ],
-          "form_title": "Передние ноги"
-        },
-        {
-          "id": "photo_genitals",
-          "screen": "scroll_form",
-          "field_ids": [
+            "photo_front_legs",
             "photo_genitals_guide",
-            "photo_scrotum",
-            "photo_udder"
-          ],
-          "form_title": "Мошонка / вымя"
-        },
-        {
-          "id": "photo_head",
-          "screen": "scroll_form",
-          "field_ids": [
+            "photo_udder",
             "photo_head_guide",
             "photo_head_side",
             "photo_head_top"
           ],
-          "form_title": "Голова"
+          "form_title": "Фото ракурсы"
         },
         {
           "id": "review",

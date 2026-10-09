@@ -1,0 +1,283 @@
+{
+  "id": "young",
+  "title": "Молодняк (до 24 мес.)",
+  "version": "1",
+  "form_ids": [
+    "young",
+    "young_inference"
+  ],
+  "identity": [
+    "scan_time",
+    "cow_name",
+    "young_sex",
+    "cow_breed",
+    "cow_identifier",
+    "months"
+  ],
+  "measurements": [
+    "weight_real",
+    "height_at_croup_real",
+    "height_at_withers_real",
+    "chest_depth_real",
+    "chest_width_behind_shoulders_real",
+    "width_at_hook_bones_real",
+    "width_at_pin_bones_real",
+    "body_length_oblique_real",
+    "rump_length_oblique_real",
+    "chest_girth_real",
+    "pastern_girth_real",
+    "rump_half_girth_real",
+    "head_length_real",
+    "forehead_length_real",
+    "forehead_width_real"
+  ],
+  "qualitative": [
+    "overall_musculature_real",
+    "overall_musculature_real_desc",
+    "chest_quality_real",
+    "chest_quality_real_desc",
+    "withers_back_loin_real",
+    "withers_back_loin_real_desc",
+    "croup_real",
+    "croup_real_desc",
+    "ham_real",
+    "ham_real_desc"
+  ],
+  "fields": [
+    {
+      "field_id": "scan_time",
+      "type": "datetime",
+      "title": "Время сбора"
+    },
+    {
+      "field_id": "cow_name",
+      "type": "text_input",
+      "title": "Кличка"
+    },
+    {
+      "field_id": "young_sex",
+      "type": "single_choice",
+      "title": "Пол молодняка",
+      "options": [
+        {
+          "value": "bull_calf",
+          "label": "Бычок"
+        },
+        {
+          "value": "heifer",
+          "label": "Тёлка"
+        }
+      ]
+    },
+    {
+      "field_id": "cow_breed",
+      "type": "single_choice",
+      "title": "Порода",
+      "options": [
+        {
+          "value": "Абердин-ангусская",
+          "label": "Абердин-ангусская"
+        },
+        {
+          "value": "Русская комолая",
+          "label": "Русская комолая"
+        },
+        {
+          "value": "Галловейская",
+          "label": "Галловейская"
+        },
+        {
+          "value": "Герефордская",
+          "label": "Герефордская"
+        },
+        {
+          "value": "Лимузинская",
+          "label": "Лимузинская"
+        },
+        {
+          "value": "Санта-гертруда",
+          "label": "Санта-гертруда"
+        },
+        {
+          "value": "Салерская",
+          "label": "Салерская"
+        },
+        {
+          "value": "Обрак",
+          "label": "Обрак"
+        },
+        {
+          "value": "Аулиекольская",
+          "label": "Аулиекольская"
+        },
+        {
+          "value": "Калмыцкая",
+          "label": "Калмыцкая"
+        },
+        {
+          "value": "Казахская белоголовая",
+          "label": "Казахская белоголовая"
+        },
+        {
+          "value": "Шортгорнская мясного типа",
+          "label": "Шортгорнская мясного типа"
+        },
+        {
+          "value": "Симментальская мясного типа",
+          "label": "Симментальская мясного типа"
+        },
+        {
+          "value": "Шароле",
+          "label": "Шароле"
+        },
+        {
+          "value": "Кианская",
+          "label": "Кианская"
+        },
+        {
+          "value": "Белая (светлая) аквитанская",
+          "label": "Белая (светлая) аквитанская"
+        },
+        {
+          "value": "Мен-анжу",
+          "label": "Мен-анжу"
+        }
+      ]
+    },
+    {
+      "field_id": "cow_identifier",
+      "type": "text_input",
+      "title": "ID животного"
+    },
+    {
+      "field_id": "months",
+      "type": "text_input",
+      "title": "Возраст (месяцев)"
+    },
+    {
+      "field_id": "weight_real",
+      "type": "text_input",
+      "title": "Вес, кг"
+    },
+    {
+      "field_id": "height_at_croup_real",
+      "type": "text_input",
+      "title": "Высота в крестце, см"
+    },
+    {
+      "field_id": "height_at_withers_real",
+      "type": "text_input",
+      "title": "Высота в холке, см"
+    },
+    {
+      "field_id": "chest_depth_real",
+      "type": "text_input",
+      "title": "Глубина груди/туловища, см"
+    },
+    {
+      "field_id": "chest_width_behind_shoulders_real",
+      "type": "text_input",
+      "title": "Ширина груди за лопатками, см"
+    },
+    {
+      "field_id": "width_at_hook_bones_real",
+      "type": "text_input",
+      "title": "Ширина в маклоках, см"
+    },
+    {
+      "field_id": "width_at_pin_bones_real",
+      "type": "text_input",
+      "title": "Ширина в седалищных буграх, см"
+    },
+    {
+      "field_id": "body_length_oblique_real",
+      "type": "text_input",
+      "title": "Косая длина туловища, см"
+    },
+    {
+      "field_id": "rump_length_oblique_real",
+      "type": "text_input",
+      "title": "Косая (боковая) длина зада, см"
+    },
+    {
+      "field_id": "chest_girth_real",
+      "type": "text_input",
+      "title": "Обхват груди за лопатками, см"
+    },
+    {
+      "field_id": "pastern_girth_real",
+      "type": "text_input",
+      "title": "Обхват пясти, см"
+    },
+    {
+      "field_id": "rump_half_girth_real",
+      "type": "text_input",
+      "title": "Полуохват зада, см"
+    },
+    {
+      "field_id": "head_length_real",
+      "type": "text_input",
+      "title": "Длина головы, см"
+    },
+    {
+      "field_id": "forehead_length_real",
+      "type": "text_input",
+      "title": "Длина лба, см"
+    },
+    {
+      "field_id": "forehead_width_real",
+      "type": "text_input",
+      "title": "Ширина лба (наибольшая), см"
+    },
+    {
+      "field_id": "overall_musculature_real",
+      "type": "text_input",
+      "title": "Общий вид и выполненность мускулатуры (балл)"
+    },
+    {
+      "field_id": "overall_musculature_real_desc",
+      "type": "text_input",
+      "title": "Описание: общий вид и выполненность мускулатуры"
+    },
+    {
+      "field_id": "chest_quality_real",
+      "type": "text_input",
+      "title": "Грудь (балл)"
+    },
+    {
+      "field_id": "chest_quality_real_desc",
+      "type": "text_input",
+      "title": "Описание: грудь"
+    },
+    {
+      "field_id": "withers_back_loin_real",
+      "type": "text_input",
+      "title": "Холка, спина, поясница (балл)"
+    },
+    {
+      "field_id": "withers_back_loin_real_desc",
+      "type": "text_input",
+      "title": "Описание: холка, спина, поясница"
+    },
+    {
+      "field_id": "croup_real",
+      "type": "text_input",
+      "title": "Крестец (балл)"
+    },
+    {
+      "field_id": "croup_real_desc",
+      "type": "text_input",
+      "title": "Описание: крестец"
+    },
+    {
+      "field_id": "ham_real",
+      "type": "text_input",
+      "title": "Окорок (балл)"
+    },
+    {
+      "field_id": "ham_real_desc",
+      "type": "text_input",
+      "title": "Описание: окорок"
+    }
+  ]
+}
