@@ -6,6 +6,6 @@
     "method": "POST",
     "headers": { "Content-Type": "application/json" },
     "body": { "labels": [["stage", "packages"]] },
-    "timeout_seconds": 30
+    "timeout_seconds": 10
   }
 }
